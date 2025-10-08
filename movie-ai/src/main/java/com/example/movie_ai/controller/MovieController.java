@@ -2,10 +2,7 @@ package com.example.movie_ai.controller;
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
 
-
-
 import java.util.List;
-
 
 import com.example.movie_ai.model.Movie;
 import com.example.movie_ai.repository.MovieRepository;
@@ -44,10 +41,10 @@ public class MovieController {
 
         return movieRepository.save(movie);
     }
-//    @GetMapping("/allmovies")
-//    public List<Movie> getAllMovies() {
-//        return movieRepository.findAll();
-//    }
+    @GetMapping("/allmovies")
+    public List<Movie> getAllMovies() {
+        return movieRepository.findAll();
+    }
 
 //    @DeleteMapping("/movie/${id}")
 //    public void deleteMovie(@PathVariable int id) {
