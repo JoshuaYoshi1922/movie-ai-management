@@ -41,15 +41,15 @@ public class MovieController {
 
         return movieRepository.save(movie);
     }
-    @GetMapping("/allmovies")
+    @GetMapping()
     public List<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
 
-//    @DeleteMapping("/movie/${id}")
-//    public void deleteMovie(@PathVariable int id) {
-//        movieRepository.deleteById(id);
-//    }
+    @DeleteMapping()
+    public void deleteMovie(@PathVariable int id) {
+        movieRepository.deleteById(id);
+    }
 
 
 }
